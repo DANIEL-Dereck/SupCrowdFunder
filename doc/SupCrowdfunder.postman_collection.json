@@ -1,0 +1,950 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SupCrowdfunder",
+		"_postman_id": "c78a3927-1465-0a3b-de64-e34dd024442c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST-get_token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"token\", jsonData.content);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8080/SupCrowdfunder/rest/tokens/get",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@admin.admin\",\r\n  \"password\": \"admin\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_projects_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects/xml?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects",
+						"xml"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_projects_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects/json?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects",
+						"json"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_project_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects/xml/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects",
+						"xml",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_project_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects/json/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects",
+						"json",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_categories_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories/json?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories",
+						"json"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_categories_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories/xml?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories",
+						"xml"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_category_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories/xml/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories",
+						"xml",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_category_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories/json/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories",
+						"json",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_donations_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/donations/json/?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"donations",
+						"json",
+						""
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_donations_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/donations/xml/?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"donations",
+						"xml",
+						""
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_donation_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/donations/xml/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"donations",
+						"xml",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_donation_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/donations/json/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"donations",
+						"json",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_users_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users/json?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users",
+						"json"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_users_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users/xml?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users",
+						"xml"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_user_xml",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users/xml/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users",
+						"xml",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET_user_json",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users/json/1?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users",
+						"json",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST_addUser",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"titi@titi.com\",\n    \"firstname\": \"titi\",\n    \"lastname\": \"titi\",\n    \"password\": \"titi\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_updateUser",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"3\",\n    \"email\": \"titi@titi.com\",\n    \"firstname\": \"tutu\",\n    \"lastname\": \"titi\",\n    \"password\": \"titi\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_removeUser",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/users/3?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"users",
+						"3"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST_addProject",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": {\n        \"id\": \"2\",\n        \"name\": \"kuhjghfdg\"\n    },\n    \"createdAt\": \"2017-08-11 17:44:28\",\n    \"creator\": {\n        \"email\": \"toto@toto.com\",\n        \"firstname\": \"toto\",\n        \"id\": \"1\",\n        \"lastname\": \"toto\",\n        \"password\": \"toto\"\n    },\n    \"description\": \"bbbbbbbbbbbbbbbbbb\",\n    \"endsAt\": \"2017-01-31 00:08:00\",\n    \"name\": \"test2\",\n    \"objective\": \"100000.0\",\n    \"picture\": \"chess_piece_white_knight.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_updateProject",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": {\n        \"id\": \"2\",\n        \"name\": \"kuhjghfdg\"\n    },\n    \"createdAt\": \"2017-08-11 17:44:28\",\n    \"creator\": {\n        \"email\": \"toto@toto.com\",\n        \"firstname\": \"toto\",\n        \"id\": \"1\",\n        \"lastname\": \"toto\",\n        \"password\": \"toto\"\n    },\n    \"id\": \"7\",\n    \"description\": \"cccccccccccccc\",\n    \"endsAt\": \"2017-01-31 00:08:00\",\n    \"name\": \"test22\",\n    \"objective\": \"100000.0\",\n    \"picture\": \"chess_piece_white_knight.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_removeProject",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/projects/8?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"projects",
+						"8"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST_addCategory",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"CATEGORY_TEST\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_updateCategory",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"2\",\n    \"name\": \"CATEGORY_TEST\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_removeCategory",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/categories/3?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"categories",
+						"3"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST_addDonation",
+			"request": {
+				"url": {
+					"raw": "localhost:8080/SupCrowdfunder/rest/donations?Token={{token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SupCrowdfunder",
+						"rest",
+						"donations"
+					],
+					"query": [
+						{
+							"key": "Token",
+							"value": "{{token}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"createdAt\": \"2017-08-11 17:44:28\",\n    \"donator\": {\n        \"email\": \"toto@toto.com\",\n        \"firstname\": \"toto\",\n        \"id\": \"1\",\n        \"lastname\": \"toto\",\n        \"password\": \"toto\"\n    },\n    \"project\": {\n    \t\"id\": \"2\"\n    },\n    \"amount\": \"100\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
